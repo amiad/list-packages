@@ -1,0 +1,8 @@
+#!/bin/bash
+#list of packages that not deps, base or base-devel
+
+base=`pacman -Qg base | awk '{print $2}'`
+base=`echo $base | sed 's/ /|/g'`
+devel=`pacman -Qg base-devel | awk '{print $2}'`
+devel=`echo $devel | sed 's/ /|/g'`
+pacman -Qet | egrep -v "$base|$devel"
