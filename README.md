@@ -1,4 +1,4 @@
 list-packages
 =============
 
-Print list of packages that not deps, base or base-devel in Arch linux
+Print the list of instaled packages excluding the ones from: base, base-devel or instaled as dependencies 
