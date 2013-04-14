@@ -1,5 +1,5 @@
 #!/bin/bash
-#list of packages that not deps, base or base-devel
+# Output: The list of instaled packages excluding the ones from: base, base-devel or instaled as dependencies 
 
 base=`pacman -Qg base | awk '{print $2}'`
 base=`echo $base | sed 's/ /|/g'`
